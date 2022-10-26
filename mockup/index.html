@@ -23,9 +23,9 @@
             <form>
     
                 <div class="category-creation-field">
-                    <label for="category-name">Category name:<span class="required">*</span></label>
-                    <input type="text" id="category-name" name="category-name" required minlength="1" maxlength="100">
-                    <p class="input-help-text">Text with a maximum of 100 chars.</p>
+                    <label for="category-name" class="form-label">Category name:<span class="required">*</span></label>
+                    <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100">
+                    <p class="form-text">Text with a maximum of 100 chars.</p>
                 </div>
     
                 <div class="category-creation-field form-check form-switch">
@@ -36,10 +36,10 @@
                 </div>
     
                 <div class="category-creation-field">
-                    <label for="category-color">Color:<span class="required">*</span></label>
-                    <input type="color" id="category-color-button" name="category-color" required>
-                    <input type="text" id="category-color-field" name="category-color" required minlength="1" maxlength="7">
-                    <p class="input-help-text">Use color picker or enter color code (e.g. #FF0000).</p>
+                    <label for="category-color" class="form-label">Color:<span class="required">*</span></label>
+                    <input type="color" id="category-color-button" class="form-control form-control-color" name="category-color" required>
+                    <input type="text" id="category-color-field" class="form-control" name="category-color" required minlength="1" maxlength="7">
+                    <p class="form-text">Use color picker or enter color code (e.g. #FF0000).</p>
                 </div>              
     
                 <input type="submit" value="Create"/>
