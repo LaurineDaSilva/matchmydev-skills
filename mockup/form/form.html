@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a skill category</title>
+</head>
+<body>
+    <main>
+        <h1>Create a skill category</h1>
+        <form>
+            <label for="category-name">Category name:<span class="required">*</span></label>
+            <input type="text" id="category-name" name="category-name" required minlength="1" maxlength="100">
+            <p class="input-help-text">Text with a maximum of 100 chars.</p>
+
+            <label for="category-kind">Kind:<span class="required">*</span></label>
+            <p class="category-kind-hard-vs-soft-skill">Hard skill</p>
+            <input type="checkbox" id="category-kind" name="category-kind" required>
+            <p class="category-kind-hard-vs-soft-skill">Soft skill</p>
+
+            <label for="category-color">Color:<span class="required">*</span></label>
+            <input type="color" id="category-color-button" name="category-color" required>
+            <input type="text" id="category-color-field" name="category-color" required minlength="1" maxlength="7">
+            <p class="input-help-text">Use color picker or enter color code (e.g. #FF0000).</p>
+
+            <input type="submit" value="Create"/>
+
+        </form>
+    </main>
+</body>
+</html>
