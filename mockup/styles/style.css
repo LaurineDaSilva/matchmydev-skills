@@ -12,3 +12,14 @@ body{
 .span-red{
     color: #FF0000;
 }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media screen and (min-width: 576px) { 
+    .middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}
+
+
