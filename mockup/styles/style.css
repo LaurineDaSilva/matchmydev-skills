@@ -13,6 +13,13 @@ body{
     color: #FF0000;
 }
 
+#flexSwitchCheckDefault{
+    margin-left: 5%;
+}
+
+.colorBtnSwitch{
+    background-color: #FF0000;
+}
 /* Small devices (landscape phones, 576px and up)*/
 @media screen and (min-width: 576px) { 
     .middle {
@@ -43,5 +50,5 @@ body{
 }
 
 #soft-skill{
-    margin-right: 10%
+    margin-left: 10%
 }
