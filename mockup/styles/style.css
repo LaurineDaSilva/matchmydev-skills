@@ -22,4 +22,26 @@ body{
         }
 }
 
+/* Form style */
 
+.form-check{
+    display: flex; 
+    padding-left: 0;
+}
+
+.color-input{
+    display: flex;
+}
+
+#create-button{
+    display: flex; 
+    justify-content: flex-end;
+}
+
+#hard-skill{
+    margin-right: 10%;
+}
+
+#soft-skill{
+    margin-right: 10%
+}

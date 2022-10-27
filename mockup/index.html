@@ -29,30 +29,30 @@
             <form class="col-12 col-sm-5 mt-4">
 
                 <div class="category-creation-field">
-                    <label for="category-name" class="form-label">Category name:<span class="required">*</span></label>
+                    <label for="category-name" class="form-label">Category name:<span class="span-red">*</span></label>
                     <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100">
                     <p class="form-text">Text with a maximum of 100 chars.</p>
                 </div>
     
                 <div class="category-creation-field">
-                    <label for="category-kind" class="form-check-label" for="flexSwitchCheckDefault">Kind:<span class="required">*</span></label>
-                    <div class="form-check form-switch" style="display: flex; padding-left: 0">                    
-                        <p class="category-kind-hard-vs-soft-skill" id="hard-skill" style="margin-right: 10%">Hard skill</p>
+                    <label for="category-kind" class="form-check-label" for="flexSwitchCheckDefault">Kind:<span class="span-red">*</span></label>
+                    <div class="form-check form-switch">                    
+                        <p class="category-kind-hard-vs-soft-skill" id="hard-skill">Hard skill</p>
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <p class="category-kind-hard-vs-soft-skill" id="soft-skill" style="margin-left: 10%">Soft skill</p>
+                        <p class="category-kind-hard-vs-soft-skill" id="soft-skill">Soft skill</p>
                     </div>
                 </div>
     
                 <div class="category-creation-field">
-                    <label for="category-color" class="form-label">Color:<span class="required">*</span></label>
-                    <div class="color-input" style="display: flex">
+                    <label for="category-color" class="form-label">Color:<span class="span-red">*</span></label>
+                    <div class="color-input">
                         <input type="color" id="category-color-button" class="form-control form-control-color" name="category-color" required>
                         <input type="text" id="category-color-field" class="form-control" name="category-color" required minlength="1" maxlength="7">
                     </div class="input-group mb-3">
                         <p class="form-text">Use color picker or enter color code (e.g. #FF0000).</p>
                 </div>              
     
-                <div id="create-button" style="display: flex; justify-content: flex-end;">
+                <div id="create-button">
                     <input type="submit" class="btn btn-outline-dark" value="Create"/>
                 </div>
     
