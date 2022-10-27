@@ -50,5 +50,15 @@ body{
 }
 
 #soft-skill{
-    margin-left: 10%
+    margin-left: 10%;
+}
+
+.form-check-input:checked{
+    background-color: #121213;
+    border-color: #DCDCDC;
+}
+
+.form-check-input:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(220 220 220 / 25%);
 }
