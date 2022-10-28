@@ -25,39 +25,37 @@
 
         <main class="container-xl">
             <h1>Create a skill category</h1>
-            <div class="middle">
-            <form class="col-12 col-sm-5 mt-4">
-
-                <div class="category-creation-field">
-                    <label for="category-name" class="form-label">Category name:<span class="span-red">*</span></label>
-                    <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100">
-                    <p class="form-text">Text with a maximum of 100 chars.</p>
+                <div class="middle">
+                    <form class="col-12 col-lg-5 mt-4">
+                        <div class="category-creation-field">
+                            <label for="category-name" class="form-label">Category name:<span class="span-red">*</span></label>
+                            <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100">
+                            <p class="form-text">Text with a maximum of 100 chars.</p>
+                        </div>
+            
+                        <div class="category-creation-field">
+                            <label for="category-kind" class="form-check-label">Kind:<span class="span-red">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select one kind</option>
+                                <option value="1">Hard skills</option>
+                                <option value="2">Soft skills</option>
+                            </select>
+                        </div>
+            
+                        <div class="category-creation-field">
+                            <label for="category-color" class="form-label">Color:<span class="span-red">*</span></label>
+                            <div class="color-input">
+                                <input type="color" id="category-color-button" class="form-control form-control-color" name="category-color"  value= "#FF0000" required>
+                                <input type="text" id="category-color-field" class="form-control" name="category-color" required minlength="1" maxlength="7">
+                            </div class="input-group mb-3">
+                                <p class="form-text">Use color picker or enter color code (e.g. #FF0000).</p>
+                        </div>              
+            
+                        <div id="create-button">
+                            <input type="submit" class="btn btn-outline-dark" value="Create"/>
+                        </div>
+                    </form>
                 </div>
-    
-                <div class="category-creation-field">
-                    <label for="category-kind" class="form-check-label">Kind:<span class="span-red">*</span></label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select one kind</option>
-                        <option value="1">Hard skills</option>
-                        <option value="2">Soft skills</option>
-                      </select>
-                </div>
-    
-                <div class="category-creation-field">
-                    <label for="category-color" class="form-label">Color:<span class="span-red">*</span></label>
-                    <div class="color-input">
-                        <input type="color" id="category-color-button" class="form-control form-control-color" name="category-color"  value= "#FF0000" required>
-                        <input type="text" id="category-color-field" class="form-control" name="category-color" required minlength="1" maxlength="7">
-                    </div class="input-group mb-3">
-                        <p class="form-text">Use color picker or enter color code (e.g. #FF0000).</p>
-                </div>              
-    
-                <div id="create-button">
-                    <input type="submit" class="btn btn-outline-dark" value="Create"/>
-                </div>
-    
-            </form>
-        </div>
         </main>
     </body>
 </html>

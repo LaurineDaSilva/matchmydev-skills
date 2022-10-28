@@ -14,22 +14,6 @@ body{
     color: #FF0000;
 }
 
-#flexSwitchCheckDefault{
-    margin-left: 5%;
-}
-
-.colorBtnSwitch{
-    background-color: #FF0000;
-}
-/* Small devices (landscape phones, 576px and up)*/
-@media screen and (min-width: 576px) { 
-    .middle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-}
-
 /* Form style */
 
 .form-check{
@@ -62,4 +46,15 @@ body{
 .form-check-input:focus{
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgb(220 220 220 / 25%);
+}
+
+
+/**********MEDIA QUERIES**********/
+
+@media (min-width: 992px) { 
+    .middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
 }
