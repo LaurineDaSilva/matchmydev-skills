@@ -33,6 +33,17 @@ body{
     letter-spacing: 0.1rem;
 }
 
+.btn-outline-dark{
+    border-color: #A9A9A9;
+    background-color: #A9A9A9;
+    color: #000000;
+}
+
+.btn-outline-dark:hover, .btn-outline-dark:active{
+    background-color: #DCDCDC;
+    color: #000000;
+}
+
 #hard-skill{
     margin-right: 10%;
 }
