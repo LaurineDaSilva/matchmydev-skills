@@ -75,7 +75,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center; 
-        width: 992px;
+        width: 768px;
         margin: 0 auto;  
     }
 }
