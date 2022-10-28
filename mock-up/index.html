@@ -16,7 +16,7 @@
             
             <nav class="navbar bg-black navbar-dark container-xl navbar-expand-md">
                     <span class="navbar-brand text-white mb-0 ">match<span class="span-red">my</span>dev</span>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
             </nav>
@@ -27,23 +27,23 @@
             <h1>Create a skill category</h1>
                 <div class="middle">
                     <form class="col-12 col-md-5 mt-4">
-                        <div class="category-creation-field">
-                            <label for="category-name" class="form-label">Category name:<span class="span-red">*</span></label>
+                        <div class="category-creation-field mb-3">
+                            <label for="category-name" class="form-label">Category name <span class="span-red">*</span></label>
                             <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100">
                             <p class="form-text">Text with a maximum of 100 chars.</p>
                         </div>
             
-                        <div class="category-creation-field">
-                            <label for="category-kind" class="form-check-label">Kind:<span class="span-red">*</span></label>
-                            <select class="form-select" aria-label="Default select example">
+                        <div class="category-creation-field mb-3">
+                            <label for="category-kind" class="form-label">Kind <span class="span-red">*</span></label>
+                            <select class="form-select">
                                 <option selected>Select one kind</option>
                                 <option value="1">Hard skills</option>
                                 <option value="2">Soft skills</option>
                             </select>
                         </div>
             
-                        <div class="category-creation-field">
-                            <label for="category-color" class="form-label">Color:<span class="span-red">*</span></label>
+                        <div class="category-creation-field mb-3">
+                            <label for="category-color" class="form-label">Color <span class="span-red">*</span></label>
                             <div class="color-input">
                                 <input type="color" id="category-color-button" class="form-control form-control-color" name="category-color"  value= "#FF0000" required>
                                 <input type="text" id="category-color-field" class="form-control" name="category-color" required minlength="1" maxlength="7">
@@ -51,7 +51,7 @@
                                 <p class="form-text">Use color picker or enter color code (e.g. #FF0000).</p>
                         </div>              
             
-                        <div id="create-button" class="row">
+                        <div id="create-button" class="row mb-3">
                             <input type="submit" class="btn btn-outline-dark col-12 col-md-2" value="Create"/>
                         </div>
                     </form>
