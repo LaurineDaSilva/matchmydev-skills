@@ -28,6 +28,7 @@ body{
 #create-button{
     display: flex; 
     justify-content: flex-end;
+    padding: 0 12px;
 }
 
 #hard-skill{
