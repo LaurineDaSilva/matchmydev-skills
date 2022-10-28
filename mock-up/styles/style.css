@@ -30,13 +30,13 @@ body{
     display: flex; 
     justify-content: flex-end;
     padding: 0 12px;
-    letter-spacing: 0.1rem;
 }
 
 .btn-outline-dark{
     border-color: #A9A9A9;
     background-color: #A9A9A9;
     color: #000000;
+    letter-spacing: 0.1rem;
 }
 
 .btn-outline-dark:hover, .btn-outline-dark:active{
