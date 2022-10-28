@@ -52,10 +52,12 @@ body{
 
 /**********MEDIA QUERIES**********/
 
-@media (min-width: 992px) { 
+@media (min-width: 768px) { 
     .middle {
         display: flex;
         justify-content: center;
-        align-items: center;   
+        align-items: center; 
+        width: 992px;
+        margin: 0 auto;  
     }
 }
