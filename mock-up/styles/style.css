@@ -66,17 +66,3 @@ body{
     box-shadow: 0px 0px 5px 4px rgb(220, 220, 220);
     border: none;
 }
-
-
-
-/**********MEDIA QUERIES**********/
-
-@media (min-width: 768px) { 
-    .middle {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        width: 768px;
-        margin: 0 auto;  
-    }
-}
