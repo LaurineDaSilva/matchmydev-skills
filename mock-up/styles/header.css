@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+
+.navbar-brand{
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+    font-size: 2rem;
+    font-weight:600;
+}
+.navbar{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.logo-span{
+    color: var(--primary-color-red);
+}

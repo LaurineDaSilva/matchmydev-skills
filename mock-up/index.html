@@ -7,7 +7,8 @@
         <title>Matchmydev-skills</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/header.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer></script>
     </head>
 
@@ -15,7 +16,7 @@
         <header class="bg-black  sticky-top mb-3">
             
             <nav class="navbar bg-black navbar-dark container-xl navbar-expand-md">
-                    <span class="navbar-brand text-white mb-0 ">match<span class="span-red">my</span>dev</span>
+                    <a class="navbar-brand text-white mb-0 ">match<span class="logo-span">my</span>dev</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -27,13 +28,13 @@
                 <div class="middle">
                     <form class="col-12 col-md-6 mx-auto">
                         <div class="category-creation-field mb-3">
-                            <label for="category-name" class="form-label">Category name <span class="span-red">*</span></label>
+                            <label for="category-name" class="form-label">Category name <span class="required-star">*</span></label>
                             <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100">
                             <p class="form-text">Text with a maximum of 100 chars.</p>
                         </div>
             
                         <div class="category-creation-field mb-3">
-                            <label for="category-kind" class="form-label">Kind <span class="span-red">*</span></label>
+                            <label for="category-kind" class="form-label">Kind <span class="required-star">*</span></label>
                             <select class="form-select" required>
                                 <option value="" selected>Select one kind</option>
                                 <option value="1">Hard skills</option>
@@ -42,7 +43,7 @@
                         </div>
             
                         <div class="category-creation-field mb-3">
-                            <label for="category-color" class="form-label">Color <span class="span-red">*</span></label>
+                            <label for="category-color" class="form-label">Color <span class="required-star">*</span></label>
                             <div class="input-group">
                                 <input type="text" id="category-color-field" class="form-control w-75" name="category-color" required minlength="1" maxlength="7">
                                 <input type="color" id="category-color-button" class="form-control form-control-color w-25" name="category-color"  value= "#FF0000" required>
@@ -51,7 +52,7 @@
                         </div>              
             
                         <div id="create-button" class="row mb-3">
-                            <input type="submit" class="btn btn-outline-dark col-12 col-md-2" value="Create"/>
+                            <input type="submit" class="btn btn-outline-dark col-12 col-md-3 ms-auto" value="Create"/>
                         </div>
                     </form>
                 </div>
