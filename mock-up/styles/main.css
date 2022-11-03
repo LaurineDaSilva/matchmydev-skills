@@ -40,12 +40,12 @@ main{
 
 .btn-outline-dark{
     letter-spacing: 0.1rem;
-    border-color: #A9A9A9;
-    background-color: #A9A9A9;
-    color: #000000;
+    border-color: var(--primary-color-dim-gray);
+    background-color: var(--primary-color-dim-gray);
+    color: var(--primary-color-black);
 }
 
 .btn-outline-dark:hover, .btn-outline-dark:active, .btn-outline-dark:checked{
     background-color: var(--secondary-color-gainsboro);
-    color: #000000;
+    color: var(--primary-color-black);
 }
