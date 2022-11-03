@@ -29,7 +29,8 @@ main{
     border: none;
 }
 
-.required-star{
+.form-label::after{
+    content: " *";
     color: var(--primary-color-red);
 }
 
