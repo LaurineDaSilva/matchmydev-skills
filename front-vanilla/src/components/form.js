@@ -1,7 +1,7 @@
 import { messages } from "../messages.js";
 
 function renderForm() {
-    const content = `
+    const formContent = `
         <div class="mb-3">
             <label for="category-name" class="form-label">${messages.form.name.label}</label>
             <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100">
@@ -32,7 +32,7 @@ function renderForm() {
     ;
 
     const form = document.getElementById("form");
-    form.innerHTML = content;
+    form.innerHTML = formContent;
 }
 
 export { renderForm };
