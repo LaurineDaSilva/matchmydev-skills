@@ -2,14 +2,14 @@ import { messages } from "../messages.js";
 
 function renderForm() {
     const content = `
-        <div class="category-creation-field mb-3">
+        <div class="mb-3">
             <label for="category-name" class="form-label">${messages.form.name.label}</label>
             <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100">
             <p class="form-text">${messages.form.name.helpText}</p>
         </div>
 
-        <div class="category-creation-field mb-3">
-            <label for="category-kind" class="form-label">${messages.form.kind.label}</label>
+        <div class="mb-3">
+            <p class="form-label">${messages.form.kind.label}</p>
             <select class="form-select" required>
                 <option value="" selected>${messages.form.kind.valueDefault}</option>
                 <option value="1">${messages.form.kind.value1}</option>
@@ -17,7 +17,7 @@ function renderForm() {
             </select>
         </div>
 
-        <div class="category-creation-field mb-3">
+        <div class="mb-3">
             <label for="category-color" class="form-label">${messages.form.color.label}</label>
             <div class="input-group">
                 <input type="text" id="category-color-field" class="form-control w-75" name="category-color" required minlength="1" maxlength="7">
