@@ -5,6 +5,7 @@
             "thirdWord": "dev"
     },
     "menuItem":"Skills",
+    "h1": "Create a skill category",
     "form": {
         "h1":"Create a skill category",
         "name": {"label":"Category name",
