@@ -15,16 +15,18 @@
                 "helpText": "Use color picker or enter color code (e.g. #FF0000)."
         }
     },
-    "notFound401": {
-        "h1": "Error 401 - Unauthorized"
-    },
-    "notFound403": {
-        "h1": "Error 403 - Forbidden"
-    },
-    "notFound404": {
-        "h1": "Error 404 - Not Found"
-    },
-    "notFound500": {
-        "h1": "Error 500 - Internal Server Error"
+    "error": {
+        "401": {
+            "h1": "Error 401 - Unauthorized"
+        },
+        "403": {
+            "h1": "Error 403 - Forbidden"
+        },
+        "404": {
+            "h1": "Error 404 - Not Found"
+        },
+        "500": {
+            "h1": "Error 500 - Internal Server Error"
+        }
     }
 }
