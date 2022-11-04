@@ -1,5 +1,9 @@
 {
     "brand":"matchmydev",
+    "logo": {"firstWord": "match",
+            "secondWord": "my",
+            "thirdWord": "dev"
+    },
     "menuItem":"Skills",
     "form": {
         "h1":"Create a skill category",
