@@ -5,8 +5,7 @@
             "thirdWord": "dev"
     },
     "menuItem":"Skills",
-    "h1": "Create a skill category",
-    "categoryCreationForm": {
+    "categoryMain": {
         "h1":"Create a skill category",
         "name": {"label":"Category name",
                 "helpText": "Text with a maximum of 100 chars. Must be unique for a given kind."
