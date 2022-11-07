@@ -5,7 +5,7 @@
             "thirdWord": "dev"
     },
     "menuItem":"Skills",
-    "categoryMain": {
+    "categoryForm": {
         "h1":"Create a skill category",
         "name": {"label":"Category name",
                 "helpText": "Text with a maximum of 100 chars. Must be unique for a given kind."
@@ -31,6 +31,21 @@
         },
         "500": {
             "h1": "Error 500 - Internal Server Error"
+        }
+    },
+    "skillForm": {
+        "h1":"Create a skill",
+        "fullName":{
+            "label":"Full name",
+            "helpText": "Text with a maximum of 100 chars. Must be unique."
+        },
+        "shortName":{
+            "label":"Short name",
+            "helpText": "Text with a maximum of 20 chars. Must be unique."
+        },
+        "categories":{
+            "label":"Categories",
+            "helpText": "Choose at least one category, either hard or soft skill."
         }
     }
 }

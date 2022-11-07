@@ -1,7 +1,7 @@
 import { initMessages } from "./messages.js";
-import { renderCategoryMain } from "./components/categoryMain.js";
+import { renderCategoryForm } from "./components/categoryForm.js";
 import { renderHeader } from "./components/header.js";
 
 await initMessages();
-renderCategoryMain();
+renderCategoryForm();
 renderHeader();
