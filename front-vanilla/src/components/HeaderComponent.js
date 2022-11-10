@@ -10,7 +10,7 @@ export default class HeaderComponent extends BaseComponent {
     template() {
         return `
         <nav class="navbar bg-black navbar-dark container-xl navbar-expand-md">
-            <a class="navbar-brand text-white mb-0 ">${messages.logo.firstWord}<span class="logo-span">${messages.logo.secondWord}</span>${messages.logo.thirdWord}</a>
+            <a class="navbar-brand text-white mb-0 ">${this.msg.logo.firstWord}<span class="logo-span">${this.msg.logo.secondWord}</span>${this.msg.logo.thirdWord}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
