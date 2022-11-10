@@ -1,4 +1,4 @@
-import { initMessages } from "./messages.js";
+import { initMessages } from "./Messages.js";
 import { renderCategoryForm } from "./components/categoryForm.js";
 import { renderHeader } from "./components/header.js";
 

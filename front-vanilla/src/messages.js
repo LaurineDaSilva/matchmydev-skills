@@ -1,8 +1,8 @@
-let messages = null;
+export default class Messages {
+    static messages = null;
 
-async function initMessages() {
-    const response = await fetch(`./src/resources/messages.json`); 
-    messages = await response.json();
+    static async init() {
+        const response = await fetch(`./src/resources/messages.json`);
+        messages = await response.json();
+    }
 }
-
-export { initMessages, messages };
