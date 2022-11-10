@@ -1,7 +1,14 @@
-import { messages } from "../Messages.js";
+import BaseComponent from "./BaseComponent.js";
 
-function renderHeader() {
-    const headerContent = `
+
+export default class HeaderComponent extends BaseComponent {
+    
+    constructor() {
+        super("#header");
+    }
+
+    template() {
+        return `
         <nav class="navbar bg-black navbar-dark container-xl navbar-expand-md">
             <a class="navbar-brand text-white mb-0 ">${messages.logo.firstWord}<span class="logo-span">${messages.logo.secondWord}</span>${messages.logo.thirdWord}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -20,11 +27,7 @@ function renderHeader() {
                     </li>
                 </ul>
             </div>
-        </nav>
-        `
+        </nav>`;
+    }
+};
 
-    const header = document.getElementById("header");
-    header.innerHTML = headerContent;
-}
-
-export { renderHeader };
