@@ -29,7 +29,7 @@
         "notFound": {
             "h1": "Error 404 - Not Found"
         },
-        "internaServerError": {
+        "internalServerError": {
             "h1": "Error 500 - Internal Server Error"
         }
     },
