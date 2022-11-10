@@ -23,7 +23,7 @@ function renderCategoryForm() {
                     <div class="mb-3">
                         <label for="category-color" class="form-label">${messages.categoryForm.color.label}</label>
                         <div class="input-group">
-                            <input type="text" id="category-color-field" class="form-control w-75" name="category-color" required minlength="1" maxlength="7">
+                            <input type="text" id="category-color-field" class="form-control w-75" name="category-color" required minlength="1" maxlength="8">
                             <input type="color" id="category-color-button" class="form-control form-control-color w-25" name="category-color"  value= "#FF0000" required>
                         </div>
                             <p class="form-text">${messages.categoryForm.color.helpText}</p>
@@ -38,6 +38,35 @@ function renderCategoryForm() {
 
     const main = document.getElementById("main");
     main.innerHTML = categoryFormContent;
+
+
+    const form = document.getElementById("form");
+    form.innerHTML = categoryFormContent;
+
+    
+    // *****addEventListener for input color and input text of form
+
+    const button = document.getElementById("category-color-button");
+    //search my id:"category-color-button"
+    
+    const field = document.getElementById("category-color-field");
+    //search my id:"category-color-field"
+    
+    
+    button.addEventListener("change", colorPicker); 
+    
+    function colorPicker(){
+        // console.log(button.value); 
+        field.value = button.value;
+    }
+    
+    field.addEventListener("change", colorField);
+    
+    function colorField(){
+        // console.log(field.value);   
+        button.value = field.value;
+    }
+
 }
 
 export { renderCategoryForm };
