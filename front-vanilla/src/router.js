@@ -1,5 +1,12 @@
-import { renderForm } from "./components/form.js";
-import { renderHeader } from "./components/header.js";
+import HeaderComponent from "./components/HeaderComponent.js";
+import CategoryFormComponent from "./components/CategoryFormComponent.js";
 
-renderForm();
-renderHeader();
+export default class Router {
+
+    static init() {
+        const headerComponent = new HeaderComponent();
+        headerComponent.render();
+        const categoryForm = new CategoryFormComponent;
+        categoryForm.render();
+    }
+}
