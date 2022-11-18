@@ -24,7 +24,7 @@ main{
     border: none;
 }
 
-.form-label::after{
+.form-label:not(.small)::after{
     content: " *";
     color: var(--color-primary-red);
 }
