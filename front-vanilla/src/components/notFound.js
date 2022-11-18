@@ -1,15 +1,16 @@
 import { } from "";
 
-export default class NotFound {
+export default class NotFound extends BaseComponent {
 
-    render() {
-        const contentError404 = `
+    constructor() {
+        super("#main");
+    }
+
+    template() {
+        return contentError404 = `
             <h1>Error 404 - Not Found</h1>
             <img src="" alt="" class="img-fluid">
         `;
-
-    const error404 = document.getElementById("form");
-    error404.innerHTML = contentError404;
     };
 
 }
