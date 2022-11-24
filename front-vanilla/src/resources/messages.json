@@ -47,5 +47,16 @@
             "label":"Categories",
             "helpText": "Choose at least one category, either hard or soft skill."
         }
+    },
+    "categorySearchForm":{
+        "h1": "Search for a skill category",
+        "label": "Skill category name",
+        "helpText": "Please enter part of or full name of the skill category, will find any match containing input text.",
+    "categories": {
+        "h2": "Categories",
+        "firstColumn": "Name",
+        "secondColumn": "Kind",
+        "thirdColumn": "color"
+        }
     }
 }
