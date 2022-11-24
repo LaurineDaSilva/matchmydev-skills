@@ -23,7 +23,7 @@ export default class HeaderComponent extends BaseComponent {
                         <a href="#/skill-form" class="nav-link text-white"> Create a new skill </a>
                     </li>
                     <li class="nav-item ms-3">
-                        <a href="#/skill-form" class="nav-link text-white"> Search for skill categories </a>
+                        <a href="#/category-list" class="nav-link text-white"> Search for skill categories </a>
                     </li>
                 </ul>
             </div>
