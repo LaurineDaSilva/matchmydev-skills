@@ -1,10 +1,6 @@
 import HeaderComponent from "./components/HeaderComponent.js";
 import CategoryFormComponent from "./components/CategoryFormComponent.js";
-<<<<<<< HEAD
-import CategorySearchComponent from "./components/CategorySearchComponent.js";
-=======
 import SkillFormComponent from "./components/SkillFormComponent.js";
->>>>>>> ea01435335969e238a48d51b7c4683f5cd1fc1ca
 
 export default class Router {
 
@@ -12,12 +8,6 @@ export default class Router {
         const headerComponent = new HeaderComponent();
         Router.route();
         headerComponent.render();
-<<<<<<< HEAD
-        const categoryForm = new CategoryFormComponent;
-        categoryForm.render();
-        const categorySearchComponent = new CategorySearchComponent;
-        categorySearchComponent.render();
-=======
     }
 
     static route(event) {
@@ -29,6 +19,5 @@ export default class Router {
             component = new SkillFormComponent();
         }
         component.render();
->>>>>>> ea01435335969e238a48d51b7c4683f5cd1fc1ca
     }
 }
