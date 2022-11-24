@@ -23,73 +23,49 @@ export default class CategorySearchComponent extends BaseComponent{
                 <thead class="table-labels-background">
                     <th scope="col" class="col">Name</th>
                     <th scope="col" class="col">Kind</th>
-                    <th scope="col" class="col">Created By</th>
-                    <th scope="col" class="col">Last Updated By</th>
                 </thead>
                 <tbody>
                     <tr>
                         <td>test</td>
                         <td>test</td>
+                    </tr>
+                    <tr>
                         <td>test</td>
                         <td>test</td>
                     </tr>
                     <tr>
                         <td>test</td>
                         <td>test</td>
+                    </tr>
+                    <tr>
                         <td>test</td>
                         <td>test</td>
                     </tr>
                     <tr>
                         <td>test</td>
                         <td>test</td>
+                    </tr>
+                    <tr>
                         <td>test</td>
                         <td>test</td>
                     </tr>
                     <tr>
                         <td>test</td>
                         <td>test</td>
+                    </tr>
+                    <tr>
                         <td>test</td>
                         <td>test</td>
                     </tr>
                     <tr>
                         <td>test</td>
                         <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
                     </tr>
                     <tr>
                         <td>test</td>
                         <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
                     </tr>
                     <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
                         <td>test</td>
                         <td>test</td>
                     </tr>
