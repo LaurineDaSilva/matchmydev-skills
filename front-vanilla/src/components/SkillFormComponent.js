@@ -13,14 +13,14 @@ export default class SkillFormComponent extends BaseComponent {
                         <div class="skill-name-inputs row">
                             <div class="mb-3 col-12 col-md-6">
                                 <label for="full-name" class="form-label">Full name</label>
-                                <input type="text" id="full-name" class="form-control" name="full-name" required minlength="1" maxlength="100" oninvalid="this.setCustomValidity('Required field.')"
+                                <input type="text" id="full-name" class="form-control" name="fullName" required minlength="1" maxlength="100" oninvalid="this.setCustomValidity('Required field.')"
                                 oninput="this.setCustomValidity('')">
                                 <p class="form-text">Text with a maximum of 100 chars.</p>
                             </div>
                 
                             <div class="mb-3 col-12 col-md-6">
                                 <label for="short-name" class="form-label">Short name</label>
-                                <input type="text" id="short-name" class="form-control" name="short-name" required minlength="1" maxlength="100" oninvalid="this.setCustomValidity('Required field.')"
+                                <input type="text" id="short-name" class="form-control" name="shortName" required minlength="1" maxlength="100" oninvalid="this.setCustomValidity('Required field.')"
                                 oninput="this.setCustomValidity('')">
                                 <p class="form-text">Text with a maximum of 100 chars.</p>
                             </div>
