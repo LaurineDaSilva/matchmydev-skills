@@ -17,17 +17,16 @@ export default class HeaderComponent extends BaseComponent {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav text-white ">
                     <li class="nav-item ms-3">
-                        <a href="#" class="nav-link text-white"> Profiles </a>
+                        <a href="#/category-form" class="nav-link text-white"> Create a skill category </a>
                     </li>
                     <li class="nav-item ms-3">
-                        <a href="#" class="nav-link text-white"> Projects </a>
+                        <a href="#/skill-form" class="nav-link text-white"> Create a new skill </a>
                     </li>
                     <li class="nav-item ms-3">
-                        <a href="#" class="nav-link text-white"> Sign In </a>
+                        <a href="#/skill-form" class="nav-link text-white"> Search for skill categories </a>
                     </li>
                 </ul>
             </div>
         </nav>`;
     }
 };
-

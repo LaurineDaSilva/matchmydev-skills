@@ -6,6 +6,7 @@ import CategorySearchComponent from "./components/CategorySearchComponent.js";
 export default class Router {
 
     static init() {
+        window.addEventListener('hashchange', (event) => Router.route(event));
         const headerComponent = new HeaderComponent();
         Router.route();
         headerComponent.render();
