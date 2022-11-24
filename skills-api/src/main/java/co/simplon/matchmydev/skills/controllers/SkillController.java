@@ -23,7 +23,6 @@ public class SkillController {
 	Skill skill = new Skill();
 	skill.setFullName(inputs.getFullName());
 	skill.setShortName(inputs.getShortName());
-	skill.setCategories(inputs.getCategories());
 	DatabaseSkill.saveSkill(skill);
 	System.out.println(skill);
     }
