@@ -11,8 +11,8 @@ export default class BaseComponent {
     }
 
     render() {
-        const target = document.querySelector(this.selector);
-        target.innerHTML = this.template();
+        this.target = document.querySelector(this.selector);
+        this.target.innerHTML = this.template();
     }
 
     template() {
