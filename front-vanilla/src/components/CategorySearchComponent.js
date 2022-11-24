@@ -1,8 +1,12 @@
-import BaseComponent from "./BaseComponent.js"
+import BaseIterableComponent from "./BaseIterableComponent.js"
 
-export default class CategorySearchComponent extends BaseComponent{
+export default class CategorySearchComponent extends BaseIterableComponent{
     constructor(){
-        super("main");
+        super("main", {
+            url:"http://localhost:8080/categories",
+            method: "GET",
+            elementsSelector: "#elements"
+        });
     }
 
     template(){
@@ -23,54 +27,20 @@ export default class CategorySearchComponent extends BaseComponent{
                 <thead class="table-labels-background">
                     <th scope="col" class="col">Name</th>
                     <th scope="col" class="col">Kind</th>
+                    <th scope="col" class="col">Color</th>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
+                <tbody id="elements">
                 </tbody>
             </table>
         </div>`;
+    }
+
+    elementTemplate(element){
+        return `<tr>
+            <td>${element.name}</td>
+            <td>${element.kind}</td>
+            <td>${element.color}</td>
+        </tr>
+        `
     }
 }
