@@ -41,7 +41,6 @@ export default class BaseFormComponent extends BaseComponent {
 
     static bindViewToModel(element, type, data, property) {
         element.addEventListener("change", (event) => {
-            console.log(`${property} changed`);
             if (type == "checkbox") {
                 data[property] = element.checked;  
             } else {

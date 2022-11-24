@@ -1,69 +1,73 @@
-import BaseComponent from "./BaseComponent.js"
+import BaseFormComponent from "./BaseFormComponent.js"
 
-export default class CategoryFormComponent extends BaseComponent {
+export default class CategoryFormComponent extends BaseFormComponent {
     constructor(){
-        super("#main");
+        super("#main", {
+            url:"http://localhost:8080/categories",
+            method: "POST"
+        })
     }
-    
+
+    dataModel() {
+        return{
+            name:"",
+            kind:"",
+            color:"#FF0000",
+        }
+    }
+
     template(){
         return `
         <h1 id="h1">${this.msg.categoryForm.h1}</h1>
             <div class="middle">
                 <form class="col-12 col-md-6 mx-auto" id="form">
                     <div class="mb-3">
-                        <label for="category-name" class="form-label">${this.msg.categoryForm.name.label}</label>
-                        <input type="text" id="category-name" class="form-control" name="category-name" required minlength="1" maxlength="100" oninvalid="this.setCustomValidity('Required field.')"
-                        oninput="this.setCustomValidity('')">
+                        <label for="name" class="form-label">${this.msg.categoryForm.name.label}</label>
+                        <input type="text" id="name" class="form-control" name="name" required minlength="1" maxlength="100">
                         <p class="form-text">${this.msg.categoryForm.name.helpText}</p>
                     </div>
 
                     <div class="mb-3">
-                        <p class="form-label">${this.msg.categoryForm.kind.label}</p>
-                        <select class="form-select" required oninvalid="this.setCustomValidity('Required field.')"
-                        oninput="this.setCustomValidity('')">
+                        <label for="kind" class="form-label">${this.msg.categoryForm.kind.label}</label for="kind">
+                        <select class="form-select" name="kind" required>
                             <option value="" selected>${this.msg.categoryForm.kind.valueDefault}</option>
-                            <option value="1">${this.msg.categoryForm.kind.value1}</option>
-                            <option value="2">${this.msg.categoryForm.kind.value2}</option>
+                            <option value="Hard skills">${this.msg.categoryForm.kind.value1}</option>
+                            <option value="Soft skills">${this.msg.categoryForm.kind.value2}</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        <label for="category-color" class="form-label">${this.msg.categoryForm.color.label}</label>
+                        <label for="color" class="form-label">${this.msg.categoryForm.color.label}</label>
                         <div class="input-group">
-                            <input type="text" id="category-color-field" class="form-control w-75" name="category-color" required minlength="1" maxlength="8" oninvalid="this.setCustomValidity('Required field.')"
-                            oninput="this.setCustomValidity('')">
-                            <input type="color" id="category-color-button" class="form-control form-control-color w-25" name="category-color"  value= "#FF0000" required>
+                            <input type="text" id="color-field" class="form-control w-75" name="color" value= "#FF0000" minlength="1" maxlength="8" required>
+                            <input type="color" id="color-button" class="form-control form-control-color w-25" name="color-button"  value= "#FF0000" >
                         </div>
                             <p class="form-text">${this.msg.categoryForm.color.helpText}</p>
                     </div>              
 
                     <div class="mb-3">
-                        <input type="submit" class="btn btn-outline-dark col-12 col-md-3 offset-md-9" value="Create"/>
+                        <button type="submit" class="btn btn-outline-dark col-12 col-md-3 offset-md-9">Create</button>
                     </div>
                 </form>
             </div>`;
     }
     
+    render(){
+        super.render();
+        this.logic();
+    }
     logic(){
 
-        //search my id:"category-color-button"
-        const button = document.getElementById("category-color-button");
+        //search my id:"color-button"
+        const button = document.getElementById("color-button");
         
-        //search my id:"category-color-field"
-        const field = document.getElementById("category-color-field");
+        //search my id:"color-field"
+        const field = document.getElementById("color-field");
 
          // *****addEventListener for input color and input text of form    
-        button.addEventListener("change", CategoryForm.colorPicker()); 
+        button.addEventListener("change", ()=>{field.value =button.value} ); 
         
-        field.addEventListener("change", CategoryForm.colorField());
+        field.addEventListener("change", ()=>{button.value = field.value} );
     }
 
-    static colorPicker(){
-        // console.log(button.value); 
-        this.field.value = button.value;
-    }
-    static colorField(){
-        // console.log(field.value);   
-        this.button.value = field.value;
-    }
 }
