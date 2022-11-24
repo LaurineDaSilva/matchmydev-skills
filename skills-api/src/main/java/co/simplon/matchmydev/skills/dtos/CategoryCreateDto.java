@@ -31,7 +31,8 @@ public class CategoryCreateDto {
 
     @Override
     public String toString() {
-	return "{name=" + name + ", kind=" + kind + ", color=" + color + "}";
+	return "CategoryCreateDto [name=" + name + ", kind=" + kind + ", color="
+		+ color + "]";
     }
 
 }

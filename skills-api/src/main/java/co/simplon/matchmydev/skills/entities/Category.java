@@ -5,8 +5,6 @@ public class Category {
     private String name;
     private String kind;
     private String color;
-    private String createdBy;
-    private String lastUpdatedBy;
 
     public long getId() {
 	return id;
@@ -38,22 +36,6 @@ public class Category {
 
     public void setColor(String color) {
 	this.color = color;
-    }
-
-    public String getCreatedBy() {
-	return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-	this.createdBy = createdBy;
-    }
-
-    public String getLastUpdatedBy() {
-	return lastUpdatedBy;
-    }
-
-    public void setLastUpdatedBy(String lastUpdatedBy) {
-	this.lastUpdatedBy = lastUpdatedBy;
     }
 
     @Override

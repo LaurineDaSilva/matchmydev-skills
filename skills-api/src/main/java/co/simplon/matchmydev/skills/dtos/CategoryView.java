@@ -5,8 +5,6 @@ public class CategoryView {
     private String name;
     private String kind;
     private String color;
-    private String createdBy;
-    private String lastUpdatedBy;
 
     public CategoryView() {
 
@@ -44,27 +42,10 @@ public class CategoryView {
 	this.color = color;
     }
 
-    public String getCreatedBy() {
-	return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-	this.createdBy = createdBy;
-    }
-
-    public String getLastUpdatedBy() {
-	return lastUpdatedBy;
-    }
-
-    public void setLastUpdatedBy(String lastUpdatedBy) {
-	this.lastUpdatedBy = lastUpdatedBy;
-    }
-
     @Override
     public String toString() {
-	return "{id=" + id + ", name=" + name + ", kind=" + kind + ", color="
-		+ color + ", createdBy=" + createdBy + ", lastUpdatedBy="
-		+ lastUpdatedBy + "}";
+	return "CategoryView [id=" + id + ", name=" + name + ", kind=" + kind
+		+ ", color=" + color + "]";
     }
 
 }

@@ -35,8 +35,6 @@ public class CategoryController {
 	    view.setName(category.getName());
 	    view.setKind(category.getKind());
 	    view.setColor(category.getColor());
-	    view.setCreatedBy(category.getCreatedBy());
-	    view.setLastUpdatedBy(category.getLastUpdatedBy());
 	    views.add(view);
 	}
 	return views;
@@ -49,8 +47,6 @@ public class CategoryController {
 	category.setName(inputs.getName());
 	category.setKind(inputs.getKind());
 	category.setColor(inputs.getColor());
-	category.setCreatedBy("Powerpuff Girls");
-	category.setLastUpdatedBy("Rebelle");
 	DatabaseCategory.saveCategory(category);
 	System.out.println(category);
     }

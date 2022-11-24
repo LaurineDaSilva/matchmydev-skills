@@ -35,7 +35,8 @@ public class CategoryUpdateDto {
 
     @Override
     public String toString() {
-	return "{name=" + name + ", kind=" + kind + ", color=" + color + "}";
+	return "CategoryUpdateDto [name=" + name + ", kind=" + kind + ", color="
+		+ color + "]";
     }
 
 }
