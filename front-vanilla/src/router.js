@@ -1,6 +1,7 @@
 import HeaderComponent from "./components/HeaderComponent.js";
 import CategoryFormComponent from "./components/CategoryFormComponent.js";
 import SkillFormComponent from "./components/SkillFormComponent.js";
+import CategorySearchComponent from "./components/CategorySearchComponent.js";
 
 export default class Router {
 
@@ -17,6 +18,8 @@ export default class Router {
             component = new CategoryFormComponent;
         } else if (hash == "#/skill-form") {
             component = new SkillFormComponent();
+        }else if (hash == "#/category-list") {
+            component = new CategorySearchComponent;
         }
         component.render();
     }
