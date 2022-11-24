@@ -41,3 +41,21 @@ main{
     background-color: var( --color-secondary-gainsboro);
     color: var(--color-primary-black);
 }
+
+/* Search tables */
+
+.table-labels-background{
+    background: var(--color-secondary-gainsboro);
+}
+
+/* Search input */
+
+.input-group-text {
+    background-color: white;
+    border-left: none;
+    color: #A9A9A9;
+}
+
+.input-group .form-control{
+    border-right: 0;
+}
