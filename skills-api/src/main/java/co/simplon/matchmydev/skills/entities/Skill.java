@@ -3,9 +3,18 @@ package co.simplon.matchmydev.skills.entities;
 import java.util.ArrayList;
 
 public class Skill {
+    private Long id;
     private String fullName;
     private String shortName;
     private ArrayList<Category> categories;
+
+    public Long getId() {
+	return id;
+    }
+
+    public void setId(Long id) {
+	this.id = id;
+    }
 
     public String getFullName() {
 	return fullName;
@@ -33,8 +42,8 @@ public class Skill {
 
     @Override
     public String toString() {
-	return "Skill [fullName=" + fullName + ", shortName=" + shortName
-		+ ", categories=" + categories + "]";
+	return "Skill [id=" + id + ", fullName=" + fullName + ", shortName="
+		+ shortName + ", categories=" + categories + "]";
     }
 
 }
