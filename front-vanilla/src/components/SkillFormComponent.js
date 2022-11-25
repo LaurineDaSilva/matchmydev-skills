@@ -43,13 +43,11 @@ export default class SkillFormComponent extends BaseFormComponent {
                             <div class="row  " >
                                 <div class="col-md-6 ">
                                     <label for="categories-hard-skills" class="form-label small">Hard skills categories</label>
-                                    <select class="form-select mb-2 form-select-categories" id="categories-hard-skills" name="hardSkillIds" required multiple oninvalid="this.setCustomValidity('Required field.')"
-                                    oninput="this.setCustomValidity('')"></select>
+                                    <select class="form-select mb-2 form-select-categories" id="categories-hard-skills" name="hardSkillIds" multiple ></select>
                                 </div>
                                 <div class="col-md-6 ">
                                     <label for="categories-soft-skills" class="form-label small">Soft skills categories</label>
-                                    <select class="form-select mb-2 form-select-categories" id="categories-soft-skills" name="softSkillIds" required multiple oninvalid="this.setCustomValidity('Required field.')"
-                                    oninput="this.setCustomValidity('')"></select>
+                                    <select class="form-select mb-2 form-select-categories" id="categories-soft-skills" name="softSkillIds" multiple ></select>
                                 </div>
                                 <p class="form-text">Choose at least one category, either hard or soft skill.</p>
                             </div>
