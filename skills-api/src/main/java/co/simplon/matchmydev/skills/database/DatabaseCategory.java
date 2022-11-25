@@ -1,5 +1,6 @@
 package co.simplon.matchmydev.skills.database;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,5 +20,24 @@ public class DatabaseCategory {
 
     public static Collection<Category> findAll() {
 	return CATEGORIES.values();
+    }
+
+    public static Collection<Category> findHardSkills() {
+	return filterByKind("Hard skills");
+    }
+
+    public static Collection<Category> findSoftSkills() {
+	return filterByKind("Soft skills");
+    }
+
+    private static Collection<Category> filterByKind(String kind) {
+	Collection<Category> all = findAll();
+	Collection<Category> filtered = new ArrayList<>();
+	for (Category category : all) {
+	    if (category.getKind().equals(kind)) {
+		filtered.add(category);
+	    }
+	}
+	return filtered;
     }
 }

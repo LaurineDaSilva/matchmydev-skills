@@ -9,10 +9,10 @@ export default class BaseFormComponent extends BaseComponent {
         this.props = props;
     }
 
-    render() {
+    async render() {
         super.render();
         // Form specific logic:
-        const data = this.dataModel();
+        const data = await this.dataModel();
         const properties = Object.keys(data);
         const form = this.target.querySelector("form"); // marche pour l'approche 1 form/component. If several forms in a single component, another approach is needed.
         BaseFormComponent.bind(properties, form, data);
@@ -34,6 +34,14 @@ export default class BaseFormComponent extends BaseComponent {
     static bindModelToView(element, type, data, property) {
         if (type == "checkbox") {
             element.checked = data[property];  
+        } else if(type == "select-multiple") {
+            const items = data[property];
+            let options = "";
+            items.forEach((item)=> {
+                const option = `<option value="${item.id}">${item.label}</option>`;
+                options += option;
+            });
+            element.innerHTML = options;
         } else {
             element.value = data[property];
         }
@@ -42,14 +50,14 @@ export default class BaseFormComponent extends BaseComponent {
     static bindViewToModel(element, type, data, property) {
         element.addEventListener("change", (event) => {
             if (type == "checkbox") {
-                data[property] = element.checked;  
+                data[property] = element.checked;
             } else {
                 data[property] = element.value;
             }
         });
     }
 
-    dataModel() {
+    async dataModel() {
         return null;
     }
 }

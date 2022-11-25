@@ -1,8 +1,20 @@
-import BaseComponent from "./BaseComponent.js"
+import HttpClient from "../HttpClient.js";
+import BaseFormComponent from "./BaseFormComponent.js"
 
-export default class SkillFormComponent extends BaseComponent {
+export default class SkillFormComponent extends BaseFormComponent {
     constructor(){
         super("#main");
+    }
+
+    async dataModel() {
+        const model = {
+            fullName: "HyperText Markup Language",
+            shortName: "HTML"
+        };
+        const remoteModel = await HttpClient.send("http://localhost:8080/categories/list", "GET");
+        model.hardSkillIds = remoteModel.hardSkillIds;
+        model.softSkillIds = remoteModel.softSkillIds;
+        return model;
     }
     
     template(){
@@ -31,23 +43,13 @@ export default class SkillFormComponent extends BaseComponent {
                             <div class="row  " >
                                 <div class="col-md-6 ">
                                     <label for="categories-hard-skills" class="form-label small">Hard skills categories</label>
-                                    <select class="form-select mb-2 form-select-categories" id="categories-hard-skills" name="categories" required multiple oninvalid="this.setCustomValidity('Required field.')"
-                                    oninput="this.setCustomValidity('')">
-                                        <option value="1">Hard skill 01</option>
-                                        <option value="2">Hard skill 02</option>
-                                        <option value="3">Hard skill 03</option>
-                                        <option value="4">Hard skill 04</option>                                        
-                                    </select>
+                                    <select class="form-select mb-2 form-select-categories" id="categories-hard-skills" name="hardSkillIds" required multiple oninvalid="this.setCustomValidity('Required field.')"
+                                    oninput="this.setCustomValidity('')"></select>
                                 </div>
                                 <div class="col-md-6 ">
                                     <label for="categories-soft-skills" class="form-label small">Soft skills categories</label>
-                                    <select class="form-select mb-2 form-select-categories" id="categories-soft-skills" name="categories" required multiple oninvalid="this.setCustomValidity('Required field.')"
-                                    oninput="this.setCustomValidity('')">
-                                    <option value="1">Soft skill 01</option>
-                                    <option value="2">Soft skill 02</option>
-                                    <option value="3">Soft skill 03</option>
-                                    <option value="4">Soft skill 04</option>
-                                    </select>
+                                    <select class="form-select mb-2 form-select-categories" id="categories-soft-skills" name="softSkillIds" required multiple oninvalid="this.setCustomValidity('Required field.')"
+                                    oninput="this.setCustomValidity('')"></select>
                                 </div>
                                 <p class="form-text">Choose at least one category, either hard or soft skill.</p>
                             </div>

@@ -8,7 +8,7 @@ export default class CategoryFormComponent extends BaseFormComponent {
         })
     }
 
-    dataModel() {
+    async dataModel() {
         return{
             name:"",
             kind:"",

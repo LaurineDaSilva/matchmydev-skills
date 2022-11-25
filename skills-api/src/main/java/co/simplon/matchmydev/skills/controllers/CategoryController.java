@@ -16,14 +16,37 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.simplon.matchmydev.skills.database.DatabaseCategory;
 import co.simplon.matchmydev.skills.dtos.CategoryCreateDto;
+import co.simplon.matchmydev.skills.dtos.CategoryListsDto;
 import co.simplon.matchmydev.skills.dtos.CategoryUpdateDto;
 import co.simplon.matchmydev.skills.dtos.CategoryView;
+import co.simplon.matchmydev.skills.dtos.LabelValueDto;
 import co.simplon.matchmydev.skills.entities.Category;
 
 @RestController
 @RequestMapping("/categories")
 @CrossOrigin
 public class CategoryController {
+
+    @GetMapping("/list")
+    public CategoryListsDto getCategories() {
+	CategoryListsDto result = new CategoryListsDto();
+	result.setHardSkillIds(convert(DatabaseCategory.findHardSkills()));
+	result.setSoftSkillIds(convert(DatabaseCategory.findSoftSkills()));
+	return result;
+    }
+
+    private static Collection<LabelValueDto> convert(
+	    Collection<Category> categories) {
+	Collection<LabelValueDto> result = new ArrayList<>();
+	for (Category category : categories) {
+	    LabelValueDto dto = new LabelValueDto();
+	    dto.setId(category.getId());
+	    dto.setLabel(category.getName());
+	    result.add(dto);
+
+	}
+	return result;
+    }
 
     @GetMapping
     public Collection<CategoryView> getAll() {
