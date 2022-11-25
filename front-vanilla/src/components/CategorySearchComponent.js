@@ -27,7 +27,6 @@ export default class CategorySearchComponent extends BaseIterableComponent{
                 <thead class="table-labels-background">
                     <th scope="col" class="col">${this.msg.categorySearchForm.categories.firstColumn}</th>
                     <th scope="col" class="col">${this.msg.categorySearchForm.categories.secondColumn}</th>
-                    <th scope="col" class="col">${this.msg.categorySearchForm.categories.thirdColumn}</th>
                 </thead>
                 <tbody id="elements">
                 </tbody>
@@ -39,7 +38,6 @@ export default class CategorySearchComponent extends BaseIterableComponent{
         return `<tr>
             <td>${element.name}</td>
             <td>${element.kind}</td>
-            <td>${element.color}</td>
         </tr>
         `
     }
