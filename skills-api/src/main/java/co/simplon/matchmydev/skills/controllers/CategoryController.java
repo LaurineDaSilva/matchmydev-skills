@@ -74,6 +74,11 @@ public class CategoryController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
+
+    public void create(@Valid @RequestBody CategoryCreateDto inputs) {
+	service.create(inputs);
+    }
+    // CODE AVANT
 //    public void create(@RequestBody CategoryCreateDto inputs) {
 //	Category category = new Category();
 //	category.setName(inputs.getName());
@@ -82,10 +87,6 @@ public class CategoryController {
 //	DatabaseCategory.saveCategory(category);
 //	System.out.println(category);
 //    }
-
-    public void create(@Valid @RequestBody CategoryCreateDto inputs) {
-	service.create(inputs);
-    }
 
     @PatchMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
