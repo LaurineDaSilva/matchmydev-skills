@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+:root{
+    --color-primary-black: #000000;
+    --color-primary-red: #FF0000;
+    --color-primary-dim-gray: #A9A9A9;
+    --color-secondary-charcoal: #34282C;
+    --color-secondary-indian-red: #CD5C5C;
+    --color-secondary-gainsboro: #DCDCDC;
+}
+
+main{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Form style */
+
+.form-label{
+    font-weight: 600;
+}
+
+.form-control:focus, .form-select:focus{
+    box-shadow: 0px 0px 5px 4px var( --color-secondary-gainsboro);
+    border: none;
+}
+
+.form-label::after{
+    content: " *";
+    color: var(--color-primary-red);
+}
+
+.btn-outline-dark{
+    letter-spacing: 0.1rem;
+    border-color: var(--color-primary-dim-gray);
+    background-color: var(--color-primary-dim-gray);
+    color: var(--color-primary-black);
+}
+
+.btn-outline-dark:hover, .btn-outline-dark:active, .btn-outline-dark:focus{
+    box-shadow: 0px 0px 5px 4px var( --color-secondary-gainsboro);
+    background-color: var( --color-secondary-gainsboro);
+    color: var(--color-primary-black);
+}
+
+/* Search tables */
+
+.table-labels-background{
+    background: var(--color-secondary-gainsboro);
+}
+
+/* Search input */
+
+.input-group-text {
+    background-color: white;
+    border-left: none;
+    color: #A9A9A9;
+}
+
+.input-group .form-control{
+    border-right: 0;
+}
+
+h1{
+    font-size: 6rem;
+}
