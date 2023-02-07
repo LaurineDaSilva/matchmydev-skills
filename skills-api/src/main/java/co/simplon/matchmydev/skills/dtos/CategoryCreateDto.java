@@ -1,8 +1,16 @@
 package co.simplon.matchmydev.skills.dtos;
 
+import javax.validation.constraints.NotEmpty;
+
 public class CategoryCreateDto {
+
+    @NotEmpty
     private String name;
+
+    @NotEmpty
     private String kind;
+
+    @NotEmpty
     private String color;
 
     public String getName() {

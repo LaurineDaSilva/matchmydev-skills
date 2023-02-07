@@ -3,6 +3,8 @@ package co.simplon.matchmydev.skills.controllers;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.validation.Valid;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,11 +23,18 @@ import co.simplon.matchmydev.skills.dtos.CategoryUpdateDto;
 import co.simplon.matchmydev.skills.dtos.CategoryView;
 import co.simplon.matchmydev.skills.dtos.LabelValueDto;
 import co.simplon.matchmydev.skills.entities.Category;
+import co.simplon.matchmydev.skills.services.CategoryService;
 
 @RestController
 @RequestMapping("/categories")
 @CrossOrigin
 public class CategoryController {
+
+    private CategoryService service;
+
+    public CategoryController(CategoryService service) {
+	this.service = service;
+    }
 
     @GetMapping("/list")
     public CategoryListsDto getCategories() {
@@ -65,14 +74,19 @@ public class CategoryController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void create(@RequestBody CategoryCreateDto inputs) {
-	Category category = new Category();
-	category.setName(inputs.getName());
-	category.setKind(inputs.getKind());
-	category.setColor(inputs.getColor());
-	DatabaseCategory.saveCategory(category);
-	System.out.println(category);
+
+    public void create(@Valid @RequestBody CategoryCreateDto inputs) {
+	service.create(inputs);
     }
+    // CODE AVANT
+//    public void create(@RequestBody CategoryCreateDto inputs) {
+//	Category category = new Category();
+//	category.setName(inputs.getName());
+//	category.setKind(inputs.getKind());
+//	category.setColor(inputs.getColor());
+//	DatabaseCategory.saveCategory(category);
+//	System.out.println(category);
+//    }
 
     @PatchMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
