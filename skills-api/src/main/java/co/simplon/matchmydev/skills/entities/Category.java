@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -20,11 +22,14 @@ public class Category {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "kind")
-    private String kind;
-
     @Column(name = "color")
     private String color;
+
+    @JoinColumn(name = "kind_id")
+    // one kind to many categories
+    // many categories to one kind
+    @ManyToOne
+    private Kind kind;
 
     public long getId() {
 	return id;
@@ -42,13 +47,13 @@ public class Category {
 	this.name = name;
     }
 
-    public String getKind() {
-	return kind;
-    }
-
-    public void setKind(String kind) {
-	this.kind = kind;
-    }
+//    public String getKind() {
+//	return kind;
+//    }
+//
+//    public void setKind(String kind) {
+//	this.kind = kind;
+//    }
 
     public String getColor() {
 	return color;
@@ -56,6 +61,14 @@ public class Category {
 
     public void setColor(String color) {
 	this.color = color;
+    }
+
+    public Kind getKind() {
+	return kind;
+    }
+
+    public void setKind(Kind kind) {
+	this.kind = kind;
     }
 
     @Override
