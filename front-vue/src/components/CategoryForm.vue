@@ -41,7 +41,6 @@
                 field.addEventListener("change", ()=>{button.value = field.value} );
                 },
             create(event) {
-                event.preventDefault();
                 this.$axios.post('/categories', this.newCategory)
             }
         },
@@ -55,7 +54,7 @@
 
     <h1 id="h1">{{this.h1}}</h1>
             <div class="middle">
-                <form class="col-12 col-md-6 mx-auto" id="form">
+                <form  @submit.prevent="create" class="col-12 col-md-6 mx-auto" id="form">
                     <div class="mb-3">
                         <label for="name" class="form-label">{{this.messages.name.label}}</label>
                         <input type="text" id="name" class="form-control" name="name" required minlength="1" maxlength="100">
@@ -81,7 +80,7 @@
                     </div>              
 
                     <div class="mb-3">
-                        <button @click="create" type="submit" class="btn btn-outline-dark col-12 col-md-3 offset-md-9">Create</button>
+                        <button type="submit" class="btn btn-outline-dark col-12 col-md-3 offset-md-9">Create</button>
                     </div>
                 </form>
             </div>
