@@ -2,23 +2,6 @@
     export default {
         data() {
             return {
-                messages: {
-                    h1: "Create a skill category",
-                    name : {
-                        label: "Category name",
-                        helpText: "Text with a maximum of 100 chars. Must be unique for a given kind."
-                    },
-                    kind: {
-                        label: "Kind",
-                        valueDefault: "Select one kind",
-                        value1: "Hard skills",
-                        value2: "Soft skills"
-                    },
-                    color: {
-                        label: "Color",
-                        helpText: "Use color picker or enter color code (e.g. #FF0000)."
-                    }
-                },
                 newCategory: {
                     name: "",
                     kind: "",
@@ -52,31 +35,31 @@
 
 <template>
 
-    <h1 id="h1">{{this.h1}}</h1>
+    <h1 id="h1">Create a skill category</h1>
             <div class="middle">
                 <form  @submit.prevent="create" class="col-12 col-md-6 mx-auto" id="form">
                     <div class="mb-3">
-                        <label for="name" class="form-label">{{this.messages.name.label}}</label>
-                        <input type="text" id="name" class="form-control" name="name" required minlength="1" maxlength="100">
-                        <p class="form-text">{{this.messages.name.helpText}}</p>
+                        <label for="name" class="form-label">Category name</label>
+                        <input type="text" id="name" class="form-control" name="name">
+                        <p class="form-text">Text with a maximum of 100 chars. Must be unique for a given kind.</p>
                     </div>
 
                     <div class="mb-3">
-                        <label for="kind" class="form-label">{{this.messages.kind.label}}</label>
+                        <label for="kind" class="form-label">Kind</label>
                         <select class="form-select" name="kind" required>
-                            <option value="" selected>{{this.messages.kind.valueDefault}}</option>
-                            <option value="Hard skills">{{this.messages.kind.value1}}</option>
-                            <option value="Soft skills">{{this.messages.kind.value2}}</option>
+                            <option value="" selected>Select one kind</option>
+                            <option value="Hard skills">Hard skills</option>
+                            <option value="Soft skills">Soft skills</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        <label for="color" class="form-label">{{this.messages.color.label}}</label>
+                        <label for="color" class="form-label">Color</label>
                         <div class="input-group">
-                            <input type="text" id="color-field" class="form-control w-75" name="color" value= "#FF0000" minlength="1" maxlength="8" required>
-                            <input type="color" id="color-button" class="form-control form-control-color w-25" name="color-button"  value= "#FF0000" >
+                            <input type="text" id="color-field" class="form-control w-75" name="color" value= "#FF0000">
+                            <input type="color" id="color-button" class="form-control form-control-color w-25" name="color-button"  value= "#FF0000">
                         </div>
-                            <p class="form-text">{{this.messages.color.helpText}}</p>
+                            <p class="form-text">Use color picker or enter color code (e.g. #FF0000).</p>
                     </div>              
 
                     <div class="mb-3">
