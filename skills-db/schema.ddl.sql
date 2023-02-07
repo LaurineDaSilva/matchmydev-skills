@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS kinds;
+
+CREATE TABLE kinds (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE categories (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(150) UNIQUE NOT NULL,
+	color VARCHAR(150) NOT NULL,
+	kind_id INTEGER,
+	CONSTRAINT fk_kind_id
+		FOREIGN KEY(kind_id)
+		REFERENCES kinds(id)
+);
