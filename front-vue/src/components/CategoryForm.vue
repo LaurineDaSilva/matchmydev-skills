@@ -13,10 +13,8 @@
             submit(event) {
                 this.$axios.post('/categories', this.inputs)
             }
-        },
-        mounted() {
-            } 
         }
+    }
 
 </script>
 
