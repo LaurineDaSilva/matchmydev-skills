@@ -2,42 +2,29 @@
     export default {
         data() {
             return {
-                newCategory: {
-                    name: "",
-                    kind: "",
-                    color: ""
-                }
+                inputs: {
+                    name: null,
+                    kind: null,
+                    color: "#FF0000"
+                },
             }
         },
         methods: {
-            logic() {
-
-                //search my id:"color-button"
-                const button = document.getElementById("color-button");
-
-                //search my id:"color-field"
-                const field = document.getElementById("color-field");
-
-                // *****addEventListener for input color and input text of form    
-                button.addEventListener("change", ()=>{field.value =button.value} ); 
-
-                field.addEventListener("change", ()=>{button.value = field.value} );
-                },
-            create(event) {
-                this.$axios.post('/categories', this.newCategory)
+            submit(event) {
+                this.$axios.post('/categories', this.inputs)
             }
         },
         mounted() {
-            this.logic();
-            }
+            } 
         }
+
 </script>
 
 <template>
 
     <h1 id="h1">Create a skill category</h1>
             <div class="middle">
-                <form  @submit.prevent="create" class="col-12 col-md-6 mx-auto" id="form">
+                <form  @submit.prevent="submit" class="col-12 col-md-6 mx-auto" id="form">
                     <div class="mb-3">
                         <label for="name" class="form-label">Category name</label>
                         <input type="text" id="name" class="form-control" name="name">
@@ -56,8 +43,8 @@
                     <div class="mb-3">
                         <label for="color" class="form-label">Color</label>
                         <div class="input-group">
-                            <input type="text" id="color-field" class="form-control w-75" name="color" value= "#FF0000">
-                            <input type="color" id="color-button" class="form-control form-control-color w-25" name="color-button"  value= "#FF0000">
+                            <input v-model="inputs.color" type="text" id="color-field" class="form-control w-75" name="color">
+                            <input v-model="inputs.color" type="color" id="color-button" class="form-control form-control-color w-25" name="color-button" >
                         </div>
                             <p class="form-text">Use color picker or enter color code (e.g. #FF0000).</p>
                     </div>              
