@@ -33,7 +33,7 @@
 
                     <div class="mb-3">
                         <label for="kind" class="form-label">Kind</label>
-                        <select class="form-select" name="kind" required>
+                        <select class="form-select" name="kind">
                             <option value="" selected>Select one kind</option>
                             <option value="Hard skills">Hard skills</option>
                             <option value="Soft skills">Soft skills</option>
