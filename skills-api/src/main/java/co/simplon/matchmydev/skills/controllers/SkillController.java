@@ -1,7 +1,6 @@
 package co.simplon.matchmydev.skills.controllers;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,6 @@ import co.simplon.matchmydev.skills.entities.Skill;
 
 @RestController
 @RequestMapping("/skills")
-@CrossOrigin
 public class SkillController {
 
     @PostMapping
