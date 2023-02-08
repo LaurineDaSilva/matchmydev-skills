@@ -1,16 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import axios from 'axios'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import axiosConfig from './plugins/axiosConfig';
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
+app.use(router);
 
-const instance = axios.create({
-    baseURL : "http://localhost:8080"
-})
+app.use(axiosConfig);
 
-app.config.globalProperties.$axios = instance;
-
-app.mount('#app')
+app.mount('#app');
