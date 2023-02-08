@@ -8,10 +8,13 @@ public class CategoryCreateDto {
     private String name;
 
     @NotEmpty
-    private String kind;
-
-    @NotEmpty
     private String color;
+
+    private Long kindId;
+
+    public CategoryCreateDto() {
+	super();
+    }
 
     public String getName() {
 	return name;
@@ -19,14 +22,6 @@ public class CategoryCreateDto {
 
     public void setName(String name) {
 	this.name = name;
-    }
-
-    public String getKind() {
-	return kind;
-    }
-
-    public void setKind(String kind) {
-	this.kind = kind;
     }
 
     public String getColor() {
@@ -37,10 +32,18 @@ public class CategoryCreateDto {
 	this.color = color;
     }
 
+    public Long getKindId() {
+	return kindId;
+    }
+
+    public void setKindId(Long kindId) {
+	this.kindId = kindId;
+    }
+
     @Override
     public String toString() {
-	return "CategoryCreateDto [name=" + name + ", kind=" + kind + ", color="
-		+ color + "]";
+	return "CategoryCreateDto [name=" + name + ", color=" + color
+		+ ", kindId=" + kindId + "]";
     }
 
 }
