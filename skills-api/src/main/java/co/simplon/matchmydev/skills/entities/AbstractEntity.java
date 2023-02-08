@@ -1,6 +1,5 @@
 package co.simplon.matchmydev.skills.entities;
 
-import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,11 +9,10 @@ import javax.persistence.MappedSuperclass;
 abstract class AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+//    @Column(name = "id")
     private Long id;
 
-    public AbstractEntity() {
-	super();
+    AbstractEntity() {
 	// Required no-arg constructor
     }
 
@@ -23,7 +21,7 @@ abstract class AbstractEntity {
     }
 
     @SuppressWarnings("unused")
-    private void setId(Long id) {
+    public void setId(Long id) {
 	// Prevents from accidental assignment (set by DB)
 	this.id = id;
     }
