@@ -18,7 +18,8 @@ public class KindServiceImpl implements KindService {
 
     @Override
     public Collection<KindView> getAll() {
-	return kinds.findAllProjectedBy();
+//	return kinds.findAllProjectedBy();
+	return kinds.findByOrderByNameAsc();
     }
 
 }

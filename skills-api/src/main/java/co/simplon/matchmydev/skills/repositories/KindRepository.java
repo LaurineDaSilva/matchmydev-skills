@@ -9,5 +9,6 @@ import co.simplon.matchmydev.skills.entities.Kind;
 
 public interface KindRepository extends JpaRepository<Kind, Long> {
 
-    Collection<KindView> findAllProjectedBy();
+//    Collection<KindView> findAllProjectedBy();
+    Collection<KindView> findByOrderByNameAsc();
 }
