@@ -6,7 +6,6 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +25,6 @@ import co.simplon.matchmydev.skills.services.CategoryService;
 
 @RestController
 @RequestMapping("/categories")
-@CrossOrigin
 public class CategoryController {
 
     private CategoryService service;
