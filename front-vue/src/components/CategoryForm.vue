@@ -4,7 +4,7 @@ export default {
     return {
       inputs: {
         name: null,
-        kindId: null,
+        kindId: 0,
         color: '#FF0000',
       },
       kinds: [],
@@ -33,7 +33,7 @@ export default {
         <div class="mb-3">
           <label for="name" class="form-label">Category name</label>
           <input
-            v-model="inputs.name"
+            v-model.trim="inputs.name"
             id="name"
             name="name"
             type="text"
@@ -47,12 +47,12 @@ export default {
         <div class="mb-3">
           <label for="kindId" class="form-label">Kind</label>
           <select
-            v-model="inputs.kindId"
+            v-model.number="inputs.kindId"
             id="kindId"
             name="kindId"
             class="form-select"
           >
-            <option value="" selected>Select one kind</option>
+            <option value="0" selected>Select one kind</option>
             <option v-for="kind in kinds" :key="kind.id" :value="kind.id">
               {{ kind.name }}
             </option>
