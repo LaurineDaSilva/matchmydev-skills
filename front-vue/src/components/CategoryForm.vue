@@ -1,27 +1,63 @@
 <script>
+import { useVuelidate } from '@vuelidate/core';
+import { required, maxLength, alphaNum, minValue} from '@vuelidate/validators'
+
 export default {
-  data() {
-    return {
-      inputs: {
-        name: null,
-        kindId: 0,
-        color: '#FF0000',
-      },
-      kinds: [],
-    };
-  },
-  methods: {
-    submit() {
-      this.$axios.post('/categories', this.inputs);
+    setup(){
+        return{
+            validator : useVuelidate(),
+        }
     },
-    async getKinds() {
-      const response = await this.$axios.get('/kinds');
-      this.kinds = response.data;
+    data() {
+        return {
+            inputs: {
+                name: null,
+                kindId: 0,
+                color: '#FF0000',
+            },
+            kinds: [],
+        };
     },
-  },
-  mounted() {
-    this.getKinds();
-  },
+    validations(){
+        return{
+            inputs: {
+                name:{
+                    required,
+                    maxLength: maxLength(100),
+                },
+                kindId:{
+                    required,
+                    minValue: minValue(1),
+                },
+                color:{
+                    required,    
+                }
+            }
+        }
+    }
+    ,
+    methods: {
+        async submit() {   
+           const valide = await this.validator.$validate();
+           if (valide) {
+               this.$axios.post('/categories', this.inputs);
+            // reset form & validation
+            Object.assign(this.$data.inputs, this.$options.data().inputs);
+            this.validator.$reset();
+           } else {
+            console.log("Server error")
+           }
+
+        },
+        async getKinds() {
+            const response = await this.$axios.get('/kinds');
+            this.kinds = response.data;
+        },
+
+    },
+    mounted() {
+        this.getKinds();
+    },
 };
 </script>
 
@@ -38,6 +74,7 @@ export default {
             name="name"
             type="text"
             class="form-control"
+            :class="{'is-invalid' : validator.inputs.name.$error}"
           />
           <p class="form-text">
             Text with a maximum of 100 chars. Must be unique for a given kind.
@@ -51,6 +88,7 @@ export default {
             id="kindId"
             name="kindId"
             class="form-select"
+            :class="{'is-invalid' : validator.inputs.kindId.$error}"
           >
             <option value="0" selected>Select one kind</option>
             <option v-for="kind in kinds" :key="kind.id" :value="kind.id">
@@ -68,6 +106,7 @@ export default {
               name="color"
               type="text"
               class="form-control w-75"
+              :class="{'is-invalid' : validator.inputs.color.$error}"
             />
             <input
               v-model="inputs.color"
