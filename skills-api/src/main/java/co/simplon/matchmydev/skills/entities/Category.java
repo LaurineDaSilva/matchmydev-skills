@@ -17,7 +17,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -31,11 +31,11 @@ public class Category {
     @ManyToOne
     private Kind kind;
 
-    public long getId() {
+    public Long getId() {
 	return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
 	this.id = id;
     }
 
@@ -73,8 +73,8 @@ public class Category {
 
     @Override
     public String toString() {
-	return "{id=" + id + ", name=" + name + ", kind=" + kind + ", color="
-		+ color + "}";
+	return "Category [name=" + name + ", color=" + color + ", kind=" + kind
+		+ "]";
     }
 
 }

@@ -41,7 +41,7 @@ public class Kind {
 
     @Override
     public String toString() {
-	return "Kind [id=" + id + ", name=" + name + "]";
+	return "Kind [name=" + name + "]";
     }
 
 }
