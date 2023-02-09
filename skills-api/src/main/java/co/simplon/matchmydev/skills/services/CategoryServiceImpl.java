@@ -1,10 +1,14 @@
 package co.simplon.matchmydev.skills.services;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
 
 import co.simplon.matchmydev.skills.dtos.CategoryCreateDto;
+import co.simplon.matchmydev.skills.dtos.CategoryUpdateDto;
+import co.simplon.matchmydev.skills.dtos.CategoryView;
 import co.simplon.matchmydev.skills.entities.Category;
 import co.simplon.matchmydev.skills.entities.Kind;
 import co.simplon.matchmydev.skills.repositories.CategoryRepository;
@@ -35,6 +39,24 @@ public class CategoryServiceImpl implements CategoryService {
 	System.out.println(category);
 
 	this.categories.save(category);
+    }
+
+    @Override
+    public void update(CategoryUpdateDto inputs, Long id) {
+	Category entity = categories.findById(id).get();
+	entity.setName(inputs.getName());
+	entity.setColor(inputs.getColor());
+	Long kindId = inputs.getKindId();
+	Kind kind = null;
+	kind = kinds.getReferenceById(kindId);
+	entity.setKind(kind);
+	categories.save(entity);
+    }
+
+    @Override
+    public Optional<CategoryView> getOne(Long id) {
+
+	return categories.findProjectedById(id);
     }
 
 }
