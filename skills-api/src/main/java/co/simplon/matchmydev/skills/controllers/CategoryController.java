@@ -89,6 +89,6 @@ public class CategoryController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void update(@RequestBody CategoryUpdateDto inputs,
 	    @PathVariable("id") Long id) {
-	System.out.println(inputs);
+	service.update(inputs, id);
     }
 }
