@@ -55,7 +55,8 @@ export default {
         },
 
         async getOneCategory() {
-            const category = await this.$axios.get('/categories/{id}');
+            const category = await this.$axios.get(`/categories/${id}`);
+            this.categories = category.data;
         }
 
     },
