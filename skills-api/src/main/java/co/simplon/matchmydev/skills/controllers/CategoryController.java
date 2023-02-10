@@ -62,15 +62,6 @@ public class CategoryController {
     public void create(@Valid @RequestBody CategoryCreateDto inputs) {
 	service.create(inputs);
     }
-    // CODE AVANT
-//    public void create(@RequestBody CategoryCreateDto inputs) {
-//	Category category = new Category();
-//	category.setName(inputs.getName());
-//	category.setKind(inputs.getKind());
-//	category.setColor(inputs.getColor());
-//	DatabaseCategory.saveCategory(category);
-//	System.out.println(category);
-//    }
 
     @PatchMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
