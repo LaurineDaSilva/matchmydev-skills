@@ -2,6 +2,7 @@ package co.simplon.matchmydev.skills.controllers;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -19,6 +20,7 @@ import co.simplon.matchmydev.skills.database.DatabaseCategory;
 import co.simplon.matchmydev.skills.dtos.CategoryCreateDto;
 import co.simplon.matchmydev.skills.dtos.CategoryListsDto;
 import co.simplon.matchmydev.skills.dtos.CategoryUpdateDto;
+import co.simplon.matchmydev.skills.dtos.CategoryView;
 import co.simplon.matchmydev.skills.dtos.LabelValueDto;
 import co.simplon.matchmydev.skills.entities.Category;
 import co.simplon.matchmydev.skills.services.CategoryService;
@@ -90,5 +92,10 @@ public class CategoryController {
     public void update(@RequestBody CategoryUpdateDto inputs,
 	    @PathVariable("id") Long id) {
 	service.update(inputs, id);
+    }
+
+    @GetMapping("/{id}")
+    public Optional<CategoryView> getOne(@PathVariable("id") Long id) {
+	return service.getOne(id);
     }
 }
