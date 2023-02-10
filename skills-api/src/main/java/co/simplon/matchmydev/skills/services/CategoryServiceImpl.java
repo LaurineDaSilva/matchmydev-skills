@@ -1,5 +1,6 @@
 package co.simplon.matchmydev.skills.services;
 
+import java.util.Collection;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -57,6 +58,11 @@ public class CategoryServiceImpl implements CategoryService {
     public Optional<CategoryView> getOne(Long id) {
 
 	return categories.findProjectedById(id);
+    }
+
+    @Override
+    public Collection<CategoryView> getAll() {
+	return categories.findAllProjectedBy();
     }
 
 }

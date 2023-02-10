@@ -56,21 +56,6 @@ public class CategoryController {
 	return result;
     }
 
-//    @GetMapping
-//    public Collection<CategoryView> getAll() {
-//	Collection<Category> categories = DatabaseCategory.findAll();
-//	Collection<CategoryView> views = new ArrayList<>();
-//	for (Category category : categories) {
-//	    CategoryView view = new CategoryView();
-//	    view.setId(category.getId());
-//	    view.setName(category.getName());
-//	    view.setKind(category.getKind());
-//	    view.setColor(category.getColor());
-//	    views.add(view);
-//	}
-//	return views;
-//    }
-
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
 
@@ -97,5 +82,10 @@ public class CategoryController {
     @GetMapping("/{id}")
     public Optional<CategoryView> getOne(@PathVariable("id") Long id) {
 	return service.getOne(id);
+    }
+
+    @GetMapping
+    public Collection<CategoryView> getAll() {
+	return service.getAll();
     }
 }
