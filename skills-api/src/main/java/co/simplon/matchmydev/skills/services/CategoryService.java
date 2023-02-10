@@ -1,6 +1,5 @@
 package co.simplon.matchmydev.skills.services;
 
-import java.util.Collection;
 import java.util.Optional;
 
 import co.simplon.matchmydev.skills.dtos.CategoryCreateDto;
@@ -15,7 +14,4 @@ public interface CategoryService {
 
     Optional<CategoryView> getOne(Long id);
 
-    Collection<CategoryView> getAll();
-
-//    void delete(Long id);
 }

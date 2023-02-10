@@ -74,9 +74,4 @@ public class CategoryController {
     public Optional<CategoryView> getOne(@PathVariable("id") Long id) {
 	return service.getOne(id);
     }
-
-    @GetMapping
-    public Collection<CategoryView> getAll() {
-	return service.getAll();
-    }
 }
