@@ -2,6 +2,7 @@ package co.simplon.matchmydev.skills.controllers;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -19,6 +20,7 @@ import co.simplon.matchmydev.skills.database.DatabaseCategory;
 import co.simplon.matchmydev.skills.dtos.CategoryCreateDto;
 import co.simplon.matchmydev.skills.dtos.CategoryListsDto;
 import co.simplon.matchmydev.skills.dtos.CategoryUpdateDto;
+import co.simplon.matchmydev.skills.dtos.CategoryView;
 import co.simplon.matchmydev.skills.dtos.LabelValueDto;
 import co.simplon.matchmydev.skills.entities.Category;
 import co.simplon.matchmydev.skills.services.CategoryService;
@@ -54,41 +56,27 @@ public class CategoryController {
 	return result;
     }
 
-//    @GetMapping
-//    public Collection<CategoryView> getAll() {
-//	Collection<Category> categories = DatabaseCategory.findAll();
-//	Collection<CategoryView> views = new ArrayList<>();
-//	for (Category category : categories) {
-//	    CategoryView view = new CategoryView();
-//	    view.setId(category.getId());
-//	    view.setName(category.getName());
-//	    view.setKind(category.getKind());
-//	    view.setColor(category.getColor());
-//	    views.add(view);
-//	}
-//	return views;
-//    }
-
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
 
     public void create(@Valid @RequestBody CategoryCreateDto inputs) {
 	service.create(inputs);
     }
-    // CODE AVANT
-//    public void create(@RequestBody CategoryCreateDto inputs) {
-//	Category category = new Category();
-//	category.setName(inputs.getName());
-//	category.setKind(inputs.getKind());
-//	category.setColor(inputs.getColor());
-//	DatabaseCategory.saveCategory(category);
-//	System.out.println(category);
-//    }
 
     @PatchMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void update(@RequestBody CategoryUpdateDto inputs,
 	    @PathVariable("id") Long id) {
-	System.out.println(inputs);
+	service.update(inputs, id);
+    }
+
+    @GetMapping("/{id}")
+    public Optional<CategoryView> getOne(@PathVariable("id") Long id) {
+	return service.getOne(id);
+    }
+
+    @GetMapping
+    public Collection<CategoryView> getAll() {
+	return service.getAll();
     }
 }

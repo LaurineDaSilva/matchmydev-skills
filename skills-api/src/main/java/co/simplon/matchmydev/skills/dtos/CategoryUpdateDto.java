@@ -1,12 +1,21 @@
 package co.simplon.matchmydev.skills.dtos;
 
 public class CategoryUpdateDto {
+    private Long id;
     private String name;
-    private String kind;
+    private Long kindId;
     private String color;
 
     public CategoryUpdateDto() {
 	super();
+    }
+
+    public Long getId() {
+	return id;
+    }
+
+    public void setId(Long id) {
+	this.id = id;
     }
 
     public String getName() {
@@ -17,12 +26,12 @@ public class CategoryUpdateDto {
 	this.name = name;
     }
 
-    public String getKind() {
-	return kind;
+    public Long getKindId() {
+	return kindId;
     }
 
-    public void setKind(String kind) {
-	this.kind = kind;
+    public void setKindId(Long kindId) {
+	this.kindId = kindId;
     }
 
     public String getColor() {
@@ -35,8 +44,8 @@ public class CategoryUpdateDto {
 
     @Override
     public String toString() {
-	return "CategoryUpdateDto [name=" + name + ", kind=" + kind + ", color="
-		+ color + "]";
+	return "CategoryUpdateDto [id=" + id + ", name=" + name + ", kindId="
+		+ kindId + ", color=" + color + "]";
     }
 
 }
