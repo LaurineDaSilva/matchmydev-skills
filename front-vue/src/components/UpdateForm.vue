@@ -16,6 +16,7 @@ export default {
                 color: '#FF0000',
             },
             kinds: [],
+            id: this.$route.params.id,
         };
     },
     validations(){
@@ -55,14 +56,19 @@ export default {
         },
 
         async getOneCategory() {
-            const category = await this.$axios.get(`/categories/${id}`);
-            this.categories = category.data;
+            const category = await this.$axios.get(`/categories/${this.id}`); 
+            //(`/categories/${id}`);
+            this.inputs = category.data;
+            console.log(category.data);
+            console.log(this.inputs);
+            
         }
-
+        
     },
     mounted() {
         this.getKinds();
         this.getOneCategory();
+        
     },
 };
 </script>
@@ -75,6 +81,7 @@ export default {
             <div class="mb-3">
             <label for="name" class="form-label">Category name</label>
             <input
+                
                 v-model.trim="inputs.name"
                 id="name"
                 name="name"
@@ -90,14 +97,14 @@ export default {
             <div class="mb-3">
             <label for="kindId" class="form-label">Kind</label>
             <select
-                v-model.number="inputs.kindId"
+                v-model="inputs.kindId"
                 id="kindId"
                 name="kindId"
                 class="form-select"
                 :class="{'is-invalid' : validator.inputs.kindId.$error}"
             >
                 <option value="0" selected>Select one kind</option>
-                <option v-for="kind in kinds" :key="kind.id" :value="kind.id">
+                <option v-for="kind in inputs" :key="kind.id" :value="kind.id">
                 {{ kind.name }}
                 </option>
             </select>
@@ -136,6 +143,9 @@ export default {
             </button>
             </div>
         </form>
+<p>{{ inputs.kind.name}}</p>
+
         </div>
     </main>
+
 </template>
