@@ -130,6 +130,10 @@ export default {
           </button>
         </div>
       </form>
+                <!-- CONFIGURATION OF THE ROUTE --> <!--à changer l'id-->
+                <!-- <button>
+                    <a href="#/update/2" class="nav-link text-white"> Update category </a> 
+                </button> -->
     </div>
   </main>
 </template>
