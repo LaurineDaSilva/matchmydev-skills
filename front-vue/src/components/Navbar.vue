@@ -18,6 +18,13 @@
                 </li>
             </ul>
         </div>
+        <!-- Select the language -->
+        <div class="locale-changer">
+            <select v-model="$i18n.locale" class="rounded">
+                <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}
+                </option>
+            </select>
+        </div>
     </nav>
 
 </template>
