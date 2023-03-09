@@ -8,8 +8,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav text-white ">
                 <li class="nav-item ms-3">
-                    <a href="#/category-form" class="nav-link text-white"> Create a skill category </a>
+                    <router-link to="/" class="nav-link text-white">Create a skill category</router-link>
+                </li> 
+                <li class="nav-item ms-3"> 
+                    <router-link to="/update/:id" class="nav-link text-white">Update a skill category</router-link>
                 </li>
+
                 <li class="nav-item ms-3">
                     <a href="#/skill-form" class="nav-link text-white"> Create a new skill </a>
                 </li>
@@ -26,5 +30,4 @@
             </select>
         </div>
     </nav>
-
 </template>

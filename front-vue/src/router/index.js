@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import CategoryForm from "../components/CategoryForm.vue"
-import UpdateForm from "../components/UpdateForm.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,12 +6,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: CategoryForm
+      component: () => import( "../components/CategoryForm.vue")
     },
     {
     path: '/update/:id',
     name: 'updateForm',
-    component: UpdateForm
+    component: () => import("../components/UpdateForm.vue")
     }
   ]
 })
